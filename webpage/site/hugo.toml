@@ -1,0 +1,47 @@
+title = "开源贴纸库"
+languageCode = "zh-cn"
+copyright = "© 开源贴纸库"
+disableKinds = ["taxonomy", "term"]
+defaultContentLanguage = "zh"
+enableRobotsTXT = true
+timeZone = "Europe/Berlin"
+theme = "github.com/nicokaiser/hugo-theme-gallery/v2"
+
+[params]
+  title = "My Gallery"
+  description = "Example site for hugo-theme-gallery"
+  defaultTheme = "dark"
+
+[params.lunrZH]
+    index = true
+
+[author]
+  name = "开源贴纸库"
+
+[outputs]
+  page = ["HTML"]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML"]
+
+[imaging]
+  resampleFilter = "CatmullRom"
+  quality = 75
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = "ImageDescription"
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.112.0"
+
+[menu]
+[[menu.footer]]
+  name = "GitHub"
+  url = "https://github.com/kylelin1998/TG-Sticker-Spreading-Worldwide"
+  weight = 3
+[[menu.footer]]
+  name = "RSS"
+  url = "./index.xml"
+  weight = 2

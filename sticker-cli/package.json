@@ -1,0 +1,22 @@
+{
+  "name": "sticker-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kylelin1998",
+  "license": "MIT",
+  "bin": {
+    "sticker": "./index.js"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.8",
+    "inquirer": "^8.2.6",
+    "mocha": "^10.2.0",
+    "moment": "^2.30.1",
+    "unirest": "^0.6.0"
+  }
+}

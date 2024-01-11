@@ -1,0 +1,8 @@
+{{ define "main" }}
+  {{- partial "page_header.html" . -}}
+  <div class="mb-12 mt-9 px-6">
+    <div class="prose prose-neutral mx-auto max-w-screen-md dark:prose-invert">
+      {{ .Content }}
+    </div>
+  </div>
+{{ end }}

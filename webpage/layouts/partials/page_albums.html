@@ -1,0 +1,36 @@
+{{ $featuredPerPage := 10 }}
+{{ $featured := slice }}
+{{ if .IsHome }}
+  {{ $featured = where site.Pages.ByDate.Reverse "Params.images" "!=" nil }}
+{{ end }}
+{{ $paginator := .Paginate $featured $featuredPerPage }}
+
+
+<div class="mb-12 mt-9 grid grid-cols-1 gap-x-6 gap-y-9 px-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5">
+  <div>
+    {{- partial "search.html" . -}}
+  </div>
+</div>
+
+<div class="mb-12 mt-9 grid grid-cols-1 gap-x-6 gap-y-9 px-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5">
+  <div>
+    {{ if $paginator.HasPrev }}
+      <a href="{{ $paginator.Prev.URL }}">上一页</a>
+    {{ end }}
+    
+    {{ if $paginator.HasNext }}
+      <a href="{{ $paginator.Next.URL }}">下一页</a>
+    {{ end }}
+  </div>
+</div>
+<div class="mb-12 mt-9 grid grid-cols-1 gap-x-6 gap-y-9 px-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5">
+  {{ range $paginator.Pages }}
+    {{- partial "album.html" . -}}
+  {{ end }}
+  <!-- {{ range where .Pages.ByDate.Reverse "Params.private" "ne" true }}
+    {{ if not (in $featured .) }}
+      {{- partial "album.html" . -}}
+    {{ end }}
+  {{ end }} -->
+</div>
+
