@@ -1,4 +1,4 @@
-{{ $featuredPerPage := 10 }}
+{{ $featuredPerPage := 20 }}
 {{ $featured := slice }}
 {{ if .IsHome }}
   {{ $featured = where site.Pages.ByDate.Reverse "Params.images" "!=" nil }}
