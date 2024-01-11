@@ -30,7 +30,7 @@ jobs:
 
       - name: Build
         working-directory: ./webpage/site
-        run: npm run build
+        run: hugo --gc --minify --verbose
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
