@@ -27,10 +27,17 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.112.0'
+      
+      - name: Install dependencies
+        working-directory: ./webpage
+        run: |
+          npm install
+          npm install hugo-algolia -g
+          hugo-algolia -s
 
       - name: Build
         working-directory: ./webpage/site
-        run: hugo --minify
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
