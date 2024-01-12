@@ -1,5 +1,6 @@
+{{ $featured := where site.Pages.ByDate.Reverse "Params.images" "!=" nil }}
 <div id="fastSearch">
-  <div style="margin-bottom: 5px; font-weight: 700;">搜索</div>
+  <div style="margin-bottom: 5px; font-weight: 700;">搜索 ({{ len $featured }})</div>
   <input id="searchInput" tabindex="0">
   <ul id="searchResults">
   </ul>

@@ -66,6 +66,9 @@
 </div> -->
 
 <div class="mb-12 mt-9 sm:px-6">
+  <div style="margin-bottom: 10px;">
+    <a href="{{ .Params.link }}" target="_blank" style="padding: 10px; background-color: #fff; text-align: center; border-radius: 5px; color: black;">添加此贴纸</a>
+  </div>
   <div class="fj-gallery" style="visibility: hidden; display: grid; grid-template-columns: repeat(4, 1fr);">
       {{ $photos := .Params.images }}
       {{ range $index, $original := $photos }}

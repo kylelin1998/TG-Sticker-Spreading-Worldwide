@@ -1,7 +1,0 @@
-{{ $pages := shuffle (where site.Pages "Params.images" "!=" nil) }}
-
-<div class="mb-12 mt-9 grid grid-cols-1 gap-x-6 gap-y-9 px-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5">
-  {{ range first 30 $pages }}
-    {{- partial "album.html" . -}}
-  {{ end }}
-</div>

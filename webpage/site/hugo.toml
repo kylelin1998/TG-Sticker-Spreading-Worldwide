@@ -45,3 +45,7 @@ theme = "github.com/nicokaiser/hugo-theme-gallery/v2"
   name = "RSS"
   url = "./index.xml"
   weight = 2
+[[menu.footer]]
+  name = "JSON"
+  url = "./index.json"
+  weight = 2

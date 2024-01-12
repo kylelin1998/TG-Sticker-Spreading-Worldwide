@@ -1,4 +1,22 @@
 {{ define "main" }}
   {{- partial "page_header.html" . -}}
-  {{- partial "page_random_albums.html" . -}}
+  <template id="random-template">
+    <a class="random-template-a" class="transition-[filter] hover:brightness-90  dark:hover:brightness-110">
+      <div class="h-100">
+        <div class="w-full overflow-hidden rounded-2xl">
+          <img class="random-template-img" class="lazyload aspect-[3/2] w-full" style="width: 100%;" />
+        </div>
+        <div class="p-5">
+          <h5 class="random-template-title" class="mb-2 text-lg font-semibold leading-6">
+          </h5>
+          <p class="random-template-p" class="text-sm font-normal text-secondary">
+          </p>
+        </div>
+      </div>
+    </a>
+  </template>
+  <div id="random-render-box" class="mb-12 mt-9 grid grid-cols-1 gap-x-6 gap-y-9 px-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5">
+  </div>
+  <script src="/js/random_render.js"></script>
 {{ end }}
+
