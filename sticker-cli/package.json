@@ -13,10 +13,13 @@
     "sticker": "./index.js"
   },
   "dependencies": {
+    "@octokit/core": "^5.0.2",
     "handlebars": "^4.7.8",
     "inquirer": "^8.2.6",
     "mocha": "^10.2.0",
     "moment": "^2.30.1",
-    "unirest": "^0.6.0"
+    "node-base64-image": "^2.0.6",
+    "unirest": "^0.6.0",
+    "uuid": "^9.0.1"
   }
 }

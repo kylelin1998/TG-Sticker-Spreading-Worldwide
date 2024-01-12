@@ -15,7 +15,7 @@ Telegram贴纸库， 开源全部资源， 遇见你喜欢， 遇见你所爱
 贴纸资源的组成: 标题 + 链接 + 几十张缩略图
 
 #### sticker-cli
-贴纸资源的生成工具， 使用 sticker-cli 项目生成贴纸markdown格式文件到webpage项目, 以及把贴纸缩略图上传到 ImgBB 图床
+贴纸资源的生成工具， 使用 sticker-cli 项目生成贴纸markdown格式文件到webpage项目, 以及把贴纸缩略图上传到图床
 
 #### webpage
 贴纸网页显示站点源码
@@ -23,7 +23,7 @@ Telegram贴纸库， 开源全部资源， 遇见你喜欢， 遇见你所爱
 ## 贴纸录入规则
 因本人在中国大陆， 所以该项目也需要遵守中国大陆相关法律法规。
 
-禁止 黄毒赌 \ 诈骗 \ 黑灰产 \ 中国政治 \ 侮辱性 \ 中国疫情 贴纸收录
+禁止 黄毒赌 \ 诈骗 \ 黑灰产 \ 中国政治以及相关人物 \ 侮辱性 \ 中国疫情 贴纸收录
 
 [点击提交你的贴纸](https://github.com/kylelin1998/TG-Sticker-Spreading-Worldwide/issues/new)
 
