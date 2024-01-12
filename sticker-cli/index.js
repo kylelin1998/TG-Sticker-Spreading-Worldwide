@@ -88,7 +88,7 @@ async function done(answers) {
     }
 
     const sticker = await TelegramAPI.getStickerSet(bot_token, name);
-    if (!sticker) {
+    if (!sticker || !sticker.ok) {
       console.log(`${name} 获取贴纸失败...`);
       continue;
     }
@@ -103,7 +103,10 @@ async function done(answers) {
       const file = await TelegramAPI.getFile(bot_token, item.thumbnail.file_id);
       console.log(file);
       if (file && file.ok) {
-        const rsp = await ImgUploadAPI.upload('imgbb', imgbb_apikey, `https://api.telegram.org/file/bot${bot_token}/${file.result.file_path}`);
+        const rsp = await ImgUploadAPI.upload('imgbb', imgbb_apikey, `https://api.telegram.org/file/bot${bot_token}/${file.result.file_path}`).catch(e => {
+          console.log(e);
+        });
+        console.log(rsp);
           if (rsp) {
             if (rsp.status == 200) {
               console.log(rsp.data.display_url);
@@ -134,7 +137,12 @@ async function done(answers) {
   }
 }
 
-inquirer
+const configPath = `${dir}/config.json`;
+if (fs.existsSync(configPath)) {
+  const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+  done(config);
+} else {
+  inquirer
   .prompt([
      {
       "type": "input",
@@ -163,3 +171,4 @@ inquirer
   .catch((error) => {
     console.log(error);
   });
+}
