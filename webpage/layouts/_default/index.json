@@ -1,7 +1,10 @@
 {{- $.Scratch.Add "index" slice -}}
-{{- range .Site.RegularPages -}}
+{{ $featured := slice }}
+{{ $featured = where site.Pages.ByDate.Reverse "Params.images" "!=" nil }}
+{{- range $featured -}}
 {{ if isset .Params "images" }}
-      {{- $.Scratch.Add "index" (dict "title" .Title "description" .Params.description "link" .Params.link "permalink" .Permalink "images" .Params.images "featured_image" .Params.featured_image) -}}
+      {{ $name := replace .Params.link "https://t.me/addstickers/" "" }}
+      {{- $.Scratch.Add "index" (dict "name" $name "title" .Title "description" .Params.description "link" .Params.link "permalink" .Permalink "featured_image" .Params.featured_image) -}}
     {{ end }}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

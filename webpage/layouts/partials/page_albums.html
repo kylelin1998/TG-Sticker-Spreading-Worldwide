@@ -25,6 +25,10 @@
 
 <div class="mb-12 mt-9 grid grid-cols-1 gap-x-6 gap-y-9 px-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5">
   <div>
+    {{ if and ($paginator.HasPrev) ($paginator.HasNext) }}
+      <a href="/">首页</a>
+    {{ end }}
+    
     {{ if $paginator.HasPrev }}
       <a href="{{ $paginator.Prev.URL }}">上一页</a>
     {{ end }}

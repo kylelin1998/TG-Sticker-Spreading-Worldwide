@@ -12,7 +12,7 @@ function render_random_box(item) {
   title.innerText = item.title;
 
   let p = template.querySelector(".random-template-p");
-  p.innerText = item.link;
+  p.innerText = item.name;
 
   document.getElementById("random-render-box").appendChild(template);
 }

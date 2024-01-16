@@ -19,6 +19,8 @@
     "mocha": "^10.2.0",
     "moment": "^2.30.1",
     "node-base64-image": "^2.0.6",
+    "piscina": "^4.2.1",
+    "shuffled-priority-queue": "^2.1.0",
     "unirest": "^0.6.0",
     "uuid": "^9.0.1"
   }

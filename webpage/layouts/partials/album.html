@@ -36,7 +36,7 @@
         </h5>
         <p class="text-sm font-normal text-secondary">
           {{ if isset .Params "link" }}
-            {{ .Params.link }}
+            {{ replace .Params.link "https://t.me/addstickers/" "" }}
           {{ else }}
             {{ $counts.albums }}{{ i18n "unit" }}{{ i18n "stickers" }}
           {{ end }}

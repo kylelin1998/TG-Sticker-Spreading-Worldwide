@@ -20,7 +20,7 @@ class ImgUploadAPI {
       headers: {
         'X-GitHub-Api-Version': '2022-11-28'
       }
-    })
+    });
   }
   imgbb(apikey, remote) {
     return new Promise((resolve, reject) => {
