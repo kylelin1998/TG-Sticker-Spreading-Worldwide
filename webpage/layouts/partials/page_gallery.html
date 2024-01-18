@@ -65,18 +65,37 @@
   </div>
 </div> -->
 
+{{ if isset .Params "topic_image" }}
+<div
+  class="mb-12 mt-9 grid grid-cols-1 gap-x-6 gap-y-9 px-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5">
+  {{ range $index, $item := .Params.items }}
+  <div class="h-100">
+    <div class="w-full overflow-hidden rounded-2xl">
+      <img class="" src="{{ $item.image }}" style="width: 100%;" alt="{{ $item.title }}" />
+    </div>
+    <div class="p-5">
+      <h5 class="mb-2 text-lg font-semibold leading-6">
+        {{ $item.title }}
+      </h5>
+      <div style="margin-top: 5px;">
+        <a href="{{ $item.link }}" target="_blank"
+          style="padding: 10px; background-color: #fff; text-align: center; border-radius: 5px; color: black;">添加此贴纸</a>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ else }}
 <div class="mb-12 mt-9 sm:px-6">
   <div style="margin-bottom: 10px;">
-    <a href="{{ .Params.link }}" target="_blank" style="padding: 10px; background-color: #fff; text-align: center; border-radius: 5px; color: black;">添加此贴纸</a>
+    <a href="{{ .Params.link }}" target="_blank"
+      style="padding: 10px; background-color: #fff; text-align: center; border-radius: 5px; color: black;">添加此贴纸</a>
   </div>
   <div class="fj-gallery" style="visibility: hidden; display: grid; grid-template-columns: repeat(4, 1fr);">
-      {{ $photos := .Params.images }}
-      {{ range $index, $original := $photos }}
-        <img
-        class="lazyload"
-        style="display: inline; margin-top: 5px;"
-        data-src="{{ $original }}"
-        />
-      {{ end }}
+    {{ $photos := .Params.images }}
+    {{ range $index, $original := $photos }}
+    <img class="lazyload" style="display: inline; margin-top: 5px;" data-src="{{ $original }}" />
+    {{ end }}
   </div>
 </div>
+{{end}}

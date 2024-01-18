@@ -47,7 +47,7 @@ module.exports = async ({ priority, answers, name }) => {
   let github_owner = answers.github_owner;
   let github_branch = answers.github_branch;
 
-  const stickerDir = `${webpage_path}/site/content/${name.toLowerCase()}`;
+  const stickerDir = `${webpage_path}/site/content/items/${name.toLowerCase()}`;
   if (fs.existsSync(stickerDir)) {
     console.log(`${name} 此贴纸已存在...`);
     return;

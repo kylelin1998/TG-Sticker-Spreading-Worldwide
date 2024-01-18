@@ -2,6 +2,6 @@
   "private": "true",
   "scripts": {
     "build": "hugo --gc --minify",
-    "dev": "hugo server"
+    "dev": "hugo server --minify --printMemoryUsage --disableFastRender"
   }
 }
