@@ -24,4 +24,6 @@
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
   {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" defer></script>
+
+  {{- partial "analytics.html" . -}}
 </head>

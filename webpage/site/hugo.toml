@@ -4,13 +4,15 @@ copyright = "© 开源贴纸库"
 disableKinds = ["taxonomy", "term"]
 defaultContentLanguage = "zh"
 enableRobotsTXT = true
-timeZone = "Europe/Berlin"
+timeZone = "Asia/Shanghai"
 theme = "github.com/nicokaiser/hugo-theme-gallery/v2"
 
 [params]
-  title = "My Gallery"
-  description = "Example site for hugo-theme-gallery"
+  title = "开源贴纸库"
+  description = "开源贴纸库, 遇见你喜欢， 遇见你所爱"
   defaultTheme = "dark"
+  analyticsGID = "G-E9V5332WDQ"
+  analyticsClarity = "knm9nn2j89"
 
 [params.lunrZH]
     index = true
