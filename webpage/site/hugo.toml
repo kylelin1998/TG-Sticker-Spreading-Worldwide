@@ -6,6 +6,7 @@ defaultContentLanguage = "zh"
 enableRobotsTXT = true
 timeZone = "Asia/Shanghai"
 theme = "github.com/nicokaiser/hugo-theme-gallery/v2"
+baseURL = "https://tssw.kylelin1998.com"
 
 [params]
   title = "开源贴纸库"
